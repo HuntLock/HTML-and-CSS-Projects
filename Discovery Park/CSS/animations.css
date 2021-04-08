@@ -1,5 +1,5 @@
 .menu {
-    color: rgb(37, 151, 14);
+    color: rgb(0, 0, 0);
     font: bold 12px/18px sans-serif;
     text-align: center;
     display: inline;
@@ -27,7 +27,7 @@
 }
 
 .menu li:hover {
-    color: rgb(37, 151, 14);
+    color: rgb(175, 240, 162);
     background-color: rgba(100,65,0,.3);
 }
 
@@ -46,14 +46,14 @@
 .photo-container {
     text-align: center;
     margin: 15px auto;
-    width: 300px;
-    height: 169px;
+    width: 350px;
+    height: 180px;
 }
 
 .photo-container img {
     max-width: 100%;
-    width: 300px;
-    height: 169px;
+    width: 350px;
+    height: 180px;
 }
 
 .photo-overlay {
