@@ -6,23 +6,26 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href= "./css/style.css">
 	 </head>
-	 
+	
+<body>
 	 <!--NAV-->
-		<div>
+		<div class="topnav">
 			<div>
 				<ul>
 					<a href="#home" id="link"><li>HOME</li></a>
 					<a href="#gallery"><li>GALERY</li></a>
-					<a href="#contact"><li>RESERVATION</li></a>
+					<a href="#contact"><li>CONTACT</li></a>
 				</ul>
 			</div>
 		</div>
 	<!--END NAV-->
 	 
 	<!--HOME-->
-		<div id="home">
-			<h1> King's Peak Skate </h1>
-			<p> Salt Lake's Premiere Skate Shop | Est. 1998
+		<div class="header">
+		<h1>King's Peak Skate</h1>
+		<p>Salt Lake's Premiere Skate Shop | Est. 1998</p>
+	  </div>
+
 	<!--END HOME-->
 	
 	<!--VIDEO-->
@@ -34,147 +37,77 @@
 		<section id="gallery">
 			<h2> Gallery </h2>
 		
-		<!--PHOTO-CONTAINER 1-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_1.png" alt="Ice Cream Board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Screamin' Cream </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 1-->
-		
-		<!--PHOTO-CONTAINER 2-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_2.jpg" alt="Butterfly Board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Glider </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 2-->
-		
-		<!--PHOTO-CONTAINER 3-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_3.jpg" alt="Marvel Board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Hero </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 3-->
-		
-		<!--PHOTO-CONTAINER 4-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_4.jpg" alt="Snoopy Rocket Board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Lift-Off </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 4-->	
-		
-		<!--PHOTO-CONTAINER 5-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_5.jpg" alt="Red Flower Board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Flower Nightmare </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 5-->
-		
-			<!--PHOTO-CONTAINER 6-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_6.jpg" alt="Mosiac, Pink Board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Mosiac in Pink </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 6-->
-		
-		<!--PHOTO-CONTAINER 7-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_7.png" alt="Monkey Drummer board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Drummer </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 7-->
-	
-		<!--PHOTO-CONTAINER 8-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_8.jpg" alt="Community and Faces board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Nat. Builder </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 8-->	
-		
-		<!--PHOTO-CONTAINER 9-->
-			<div class="photo-container">
-				<div class="photo">
-						<img src ="./images/thumb/Thumbnail_9.png" alt="Skeleton board">
-						<div class="photo-overlay">
-							<h3 class="white-head"> Click to enlarge
-							<p> The Bones </p>
-						</div>
-				</div>	
-			</div>
-		<!--PHOTO-CONTAINER 9-->	
-	
-	<!--END GALERY-->
-	
-	<!--RSVP-->
-	<section>
-		<div id= "contact">
-			<div>
+			<div class="row">
+				<div class="col">
+				 <img src="./images/thumb/Thumbnail_a.png" onclick="openLightbox();toSlide(1)" class="hover-shadow preview">
+				</div>
+				<div class="col">
+				 <img src="./images/thumb/thumbnail_b.png" onclick="openLightbox();toSlide(2)" class="hover-shadow preview">
+				</div>
+				<div class="col">
+				 <img src="./images/thumb/thumb_c.png" onclick="openLightbox();toSlide(3)" class="hover-shadow preview">
+				</div>
+			   </div>
+			   
+			   <div id="Lightbox" class="modal">
+			   
+				<span class="close pointer" onclick="closeLightbox()">&times;</span>
+				<div class="modal-content">
+				 <div class="slide">
+				  <img src="./images/thumb/Thumbnail_a.png" class="image-slide" alt="Board Batch 1" />
+				 </div>
+				 <div class="slide">
+				  <img src="./images/thumb/thumbnail_b.png" class="image-slide" alt="Board Batch 2" />
+				 </div>
+				 <div class="slide">
+				  <img src="./images/thumb/thumb_c.png" class="image-slide" alt="Board Batch 3" />
+				 </div>
+			   
+				 <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+				 <a class="next" onclick="changeSlide(1)">&#10095;</a>
+			   
+				 <div class="dots">
+				  <div class="col">
+				   <img src="./images/thumb/Thumbnail_a.png" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Board Batch 1">
+				  </div>
+				  <div class="col">
+				   <img src="./images/thumb/thumbnail_b.png" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Board Batch 2">
+				  </div>
+				  <div class="col">
+				   <img src="./images/thumb/thumb_c.png" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Board Batch 3">
+				  </div>
+				 </div>
+				</div>
+			   </div>
+		</section>
+
+		<section id="contact">
+			<h1> Contact </h1>
 				<div>
-					<h1> Contact </h1>
+					<h3><span>Head over to your favorite shop today. </span>	
+					</h3>
+					<p>
+						Please provide us with your contact information
+					</p>
 					<div>
-						<h3><span>Head over to your favorite shop today. </span>	
-						</h3>
-						<p>
-							Please provide us with your contact information
-						</p>
-						<div>
-							<form action="" method="post">
-								<input class="rsvp" type="text" value="First Name">
-								<input class="rsvp" type="text" value="Last Name">
-								<input class="rsvp" type="text" value="Email Address">
-								<input class="rsvp" type="text" value="Phone Number">
-								<div class= "form-spacer">
-									<label class="terms"> Terms and Conditions</label>
-								</div>
-								<div>
-									<input type="submit" value= "Submit">
-								</div>
-							</form>
-						</div>
+						<form action="" method="post">
+							<input class="rsvp" type="text" value="First Name">
+							<input class="rsvp" type="text" value="Last Name">
+							<input class="rsvp" type="text" value="Email Address">
+							<input class="rsvp" type="text" value="Phone Number">
+							<div class= "form-spacer">
+								<label class="terms"> Terms and Conditions</label>
+							</div>
+							<div>
+								<input type="submit" value= "Submit">
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+	</section>	
 	<!--END RSVP-->
 	
 	<br>
@@ -183,5 +116,8 @@
 		www.kingpskate.com &nbsp;| &copy; 2021
 		</div>
 	<!--END RSVP-->
-	
+
+	<script src="./JS/main.js"> </script>
+
+	</body>
 </html>
